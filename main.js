@@ -1,5 +1,5 @@
 var vendors = require('./vendors'),
-  config = require('../conf/config'),
+  config = require('./conf/config'),
   Ntwitter = require('ntwitter');
 
 var twitter = new Ntwitter({
