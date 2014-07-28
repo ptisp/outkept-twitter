@@ -41,4 +41,6 @@ function main(mongopubsub) {
     console.log(message);
   });
   */
+
+  console.log('Notifier started.');
 }
