@@ -27,7 +27,7 @@ mongoClient.connect('mongodb://' + config.mongo_host + ':' + config.mongo_port +
 function main(mongopubsub) {
   mongopubsub.subscribe('events', function (event) {
     console.log(event);
-    if(event.level == 'alarmed') {
+    if(even.type == 'trigger' && event.level == 'alarmed') {
       var message = 'Server ' + event.hostname + ' ' + event.level + ' with ' + event.value + ' ' + event.sensor;
       twitter.updateStatus(message, function (err, data) {
         if(err) return console.log(err);
