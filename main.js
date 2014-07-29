@@ -32,6 +32,10 @@ function main(mongopubsub) {
       twitter.updateStatus(message, function (err, data) {
         if(err) return console.log(err);
       });
+    } else if(event.type == 'feed') {
+      twitter.updateStatus('Feed ' + event.feed + ' reporting ' + event.url, function (err, data) {
+        if(err) return console.log(err);
+      });
     }
   });
 
